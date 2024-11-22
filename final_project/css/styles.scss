@@ -1,0 +1,212 @@
+@mixin fade-in($duration) {
+    animation: fadeInAnimation $duration ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#cat-container {
+    text-align: center;
+    margin: auto;
+    max-width: 300px;
+}
+
+#cat-image {
+    width: 100%;
+    opacity: 0;
+    @include fade-in(5s);
+}
+
+#cat-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    color: #333;
+    opacity: 0;
+    @include fade-in(5s);
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #fff6e5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #ffe3c9;
+}
+
+#siteHeader {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 50px;
+    margin-top: 20px;
+    text-shadow: 2px 2px #ffa69e;
+}
+
+main {
+    margin-bottom: 150px;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffe3c9;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-elements {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: none;
+}
+
+#hangman-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#hangman-image {
+    width: 100%;
+}
+
+#hint-container {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #6b4226;
+}
+
+#answer-container {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    color: #6b4226;
+}
+
+#letters-container {
+    margin: 20px 0;
+}
+
+#result-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#result-container p {
+    font-size: 1.5rem;
+    color: #6b4226;
+}
+
+#result-container button {
+    font-size: 1rem;
+    background-color: #ff6f61;
+}
+
+button {
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffa69e;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.standardLink {
+    text-decoration: none;
+    color: black;
+}
+
+.standardLink:hover {
+    color: purple;
+}
+
+.buttonLink {
+    background-color: #eeeeee;
+    color: black;
+    text-decoration: none;
+    padding: 2px 6px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+footer {
+    font-family: contentFont;
+    background-color: #ffe3c9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    margin: 20px 50px;
+}
+
+@media screen and (max-width: 768px) {
+    #siteHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer a {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Author: Jordin Pirooz -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Final Project | Jordin Pirooz</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="scripts/hangman.js" defer></script>
+	</head>
+	<body>
+		<header id="top">
+			<div id="siteHeader">
+				<h1>Kitty</h1>
+				<h1>Cat</h1>
+				<h1>Hangman</h1>
+			</div>
+		</header>
+		<main>
+			<div class="game-container">
+				<div id="start-container">
+					<button id="start-game" onclick="fetchAnswers()">Start Game</button>
+				</div>
+				<div id="game-elements" style="display: none;">
+					<div id="hint-container">
+						<p><strong>Hint:</strong><span id="hint"></span></p>
+					</div>
+					<div id="answer-container"></div>
+					<div id="hangman-container">
+						<img id="hangman-image" src="images/hangman0.png" alt="Hangman Graphic">
+					</div>
+					<div id="letters-container"></div>
+					<div id="result-container">
+						<p id="result-message"></p>
+						<div id="cat-container">
+							<img id="cat-image" src="images/mittens_happy.jpg" alt="Happy Mittens">
+							<p id="cat-message"></p>
+						</div>
+						<button id="play-again" onclick="playAgain()">Play Again</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<a class="standardLink" href="mailto:jpirooz1@my.bcit.ca">jpirooz1@my.bcit.ca</a>
+			<a class="buttonLink" href="#top">Back to Top</a>
+		</footer>
+	</body>
+</html>
